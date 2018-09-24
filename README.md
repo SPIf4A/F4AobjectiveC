@@ -92,7 +92,7 @@ Click on that button brings you to the fantasy game.
 
 
 
-3. Update Your Player Score in  F4A Game
+4. Update Your Player Score in  F4A Game
 
 Apps should initialize the F4A SDK by calling the
 
