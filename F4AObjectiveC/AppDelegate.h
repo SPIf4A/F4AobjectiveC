@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <F4A/FantasyManager.h>
+
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

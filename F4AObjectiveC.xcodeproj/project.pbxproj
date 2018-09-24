@@ -15,6 +15,9 @@
 		D3ADF8A22158959400E750E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF8A12158959400E750E4 /* main.m */; };
 		D3ADF8AC2158959500E750E4 /* F4AObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF8AB2158959500E750E4 /* F4AObjectiveCTests.m */; };
 		D3ADF8B72158959500E750E4 /* F4AObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF8B62158959500E750E4 /* F4AObjectiveCUITests.m */; };
+		D3ADF8C5215895D000E750E4 /* F4A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ADF8C4215895D000E750E4 /* F4A.framework */; };
+		D3ADF8C6215895D500E750E4 /* F4A.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ADF8C4215895D000E750E4 /* F4A.framework */; };
+		D3ADF8C7215895D500E750E4 /* F4A.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3ADF8C4215895D000E750E4 /* F4A.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3ADF8C8215895D500E750E4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3ADF8C7215895D500E750E4 /* F4A.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D3ADF88F2158959200E750E4 /* F4AObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F4AObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ADF8922158959200E750E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 		D3ADF8B22158959500E750E4 /* F4AObjectiveCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = F4AObjectiveCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3ADF8B62158959500E750E4 /* F4AObjectiveCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = F4AObjectiveCUITests.m; sourceTree = "<group>"; };
 		D3ADF8B82158959500E750E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3ADF8C4215895D000E750E4 /* F4A.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = F4A.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ADF8C6215895D500E750E4 /* F4A.framework in Frameworks */,
+				D3ADF8C5215895D000E750E4 /* F4A.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 		D3ADF8862158959200E750E4 = {
 			isa = PBXGroup;
 			children = (
+				D3ADF8C4215895D000E750E4 /* F4A.framework */,
 				D3ADF8912158959200E750E4 /* F4AObjectiveC */,
 				D3ADF8AA2158959500E750E4 /* F4AObjectiveCTests */,
 				D3ADF8B52158959500E750E4 /* F4AObjectiveCUITests */,
@@ -142,6 +163,7 @@
 				D3ADF88B2158959200E750E4 /* Sources */,
 				D3ADF88C2158959200E750E4 /* Frameworks */,
 				D3ADF88D2158959200E750E4 /* Resources */,
+				D3ADF8C8215895D500E750E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,14 +456,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LTH63A4U6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = F4AObjectiveC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.f4awsiftdemo.F4AObjectiveC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.f4ademo.F4AObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,14 +478,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LTH63A4U6D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = F4AObjectiveC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.f4awsiftdemo.F4AObjectiveC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.f4ademo.F4AObjectiveC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
